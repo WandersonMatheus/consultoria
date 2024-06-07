@@ -715,6 +715,10 @@ video {
   clear: none;
 }
 
+.m-3 {
+  margin: 0.75rem;
+}
+
 .ml-8 {
   margin-left: 2rem;
 }
@@ -828,6 +832,10 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-\[this-is\\\\\] {
@@ -1684,6 +1692,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-md {
+  border-radius: 0.375rem;
+}
+
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -1813,9 +1825,27 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-bg-colorprincipal {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 17 / var(--tw-bg-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 94 117 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
+.bg-home {
+  background-image: url('/assets/bg-home.jpg');
 }
 
 .decoration-slice {
@@ -1836,6 +1866,10 @@ video {
 .box-decoration-clone {
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
+}
+
+.bg-cover {
+  background-size: cover;
 }
 
 .bg-fixed {
@@ -1865,6 +1899,10 @@ video {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-repeat {
@@ -1928,6 +1966,14 @@ video {
      object-fit: scale-down;
 }
 
+.p-4 {
+  padding: 1rem;
+}
+
+.p-8 {
+  padding: 2rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1982,6 +2028,25 @@ video {
 
 .align-super {
   vertical-align: super;
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-bold {
@@ -2063,6 +2128,16 @@ video {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-zinc-50 {
+  --tw-text-opacity: 1;
+  color: rgb(250 250 250 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2432,12 +2507,13 @@ video {
 }
 
 body {
-  background-color: #f6f7f8;
+  color: white;
 }
 
 a {
   text-decoration: none;
   color: white;
+  /* Mantenha branco se o fundo for escuro */
 }
 
 a:hover {
@@ -2448,31 +2524,34 @@ a:hover {
   font-size: 24px;
   text-transform: uppercase;
   letter-spacing: 4px;
+  color: white;
+  /* Certifique-se de que a logo também está visível */
 }
 
 .nav-list li {
   letter-spacing: 3px;
   margin-left: 32px;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.mobile-menu{
+.mobile-menu {
   display: none;
   cursor: pointer;
 }
 
-.mobile-menu div{
+.mobile-menu div {
   width: 32px;
   height: 2px;
   background-color: white;
   margin: 8px;
 }
 
-@media(max-width: 999px){
-  body{
+@media (max-width: 999px) {
+  body {
     overflow: hidden;
   }
 
-  .nav-list{
+  .nav-list {
     position: absolute;
     top: 12vh;
     right: 0;
@@ -2486,30 +2565,52 @@ a:hover {
     transition: transform 0.3s ease-in;
   }
 
-  .nav-list li{
+  .nav-list li {
     margin-left: 0;
     opacity: 0;
   }
 
-  .mobile-menu{
+  .mobile-menu {
     display: block;
   }
 }
 
-.nav-list.active{
+.nav-list.active {
   transform: translateX(0);
 }
 
-@keyframes navLinkInFade{
-  from{
+.nav-list.active li {
+  opacity: 1;
+  animation: navLinkFade 0.5s ease forwards;
+}
+
+@keyframes navLinkFade {
+  from {
     opacity: 0;
-    transform: translate(50px);
+    transform: translateX(50px);
   }
 
-  to{
+  to {
     opacity: 1;
-    transform: translate(0);
+    transform: translateX(0);
   }
+}
+
+.tituloalunos {
+  position: relative;
+  /* Necessário para o posicionamento do pseudo-elemento */
+  display: inline-block;
+  /* Faz com que o elemento se comporte como um bloco em linha */
+}
+
+.tituloalunos::before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: white;
 }
 
 @media (min-width: 640px) {
@@ -2573,6 +2674,18 @@ a:hover {
 @media (min-width: 640px) {
   .sm\:underline {
     text-decoration-line: underline;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 

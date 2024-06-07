@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage:{
         "home": "url('/assets/bg-home.jpg')"
       },
+      backgroundColor:{
+        "bg-colorprincipal": "#111111"
+      }
     },
   },
   plugins: [],
