@@ -28,27 +28,87 @@
     <!-- final Header-->
     <!-- main-->
     <main>
-        <section class="flex flex-col items-center justify-center min-h-screen bg-home bg-cover bg-center text-white" id="sobre">
+        <section class="flex flex-col items-center justify-center min-h-screen bg-home bg-cover bg-center text-white" id="home">
             <div class="bg-cyan-800 bg-opacity-40 rounded-md p-4 m-3">
                 <h1 class="justify-center items-center font-bold text-center text-4xl md:text-7xl">Seu corpo,sua melhor versão</h1>
                 <p class="justify-center items-center text-center font-mono font-bold text-base text-zinc-50 md:text-xl">olá,sou Wanderson,atuo como personal e espero poder te ajudar em sua caminhada</p>
             </div>
         </section>
+
+        <section class="min-h-screen bg-bg-colorprincipal" id="sobreMim">
+            <!--titulo da seção-->
+            <h1 class="titulos p-8 text-3xl">Quem sou?</h1>
+            <!--Descrição-->
+            <!--minha foto-->
+            <div class="flex flex-col md:flex-row items-center md:items-start md:justify-center space-y-4 md:space-y-0 md:space-x-4 p-4">
+                <div class="w-full md:w-1/3 flex justify-center md:justify-start">
+                    <img src="assets/face.jpg" alt="self picture" class="w-2/3 md:w-full h-auto rounded-lg">
+                </div>
+                <div class="w-full md:w-2/3">
+                    <p class="m-1 leading-loose">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus rutrum magna magna, eu auctor arcu semper a. Phasellus eleifend sit amet sem eu fermentum. Donec efficitur orci erat, non scelerisque odio luctus et. Vivamus feugiat orci ante, at mollis diam auctor nec. Aenean ac justo quis tellus commodo ullamcorper sed in metus. Donec eu est odio. Nam laoreet consectetur orci blandit lacinia. Aenean tincidunt pretium tellus sit amet vulputate. Integer a lacus vitae lorem varius cursus nec quis nunc.<br>
+                        Nam pellentesque commodo posuere. Duis fermentum felis eros, quis tempor est ultricies vel. Cras nunc elit, gravida nec ipsum ac, congue ultrices lacus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras non sollicitudin orci. Morbi rutrum augue euismod euismod condimentum. Curabitur sit amet finibus turpis. Donec quis pharetra augue. Pellentesque eget purus urna. Nunc tempor enim fermentum ligula posuere, quis pretium arcu gravida. Quisque convallis arcu sed lorem vulputate, et accumsan purus tempor. Curabitur faucibus ligula a nisl consequat, ut sagittis massa mollis. Aliquam gravida dolor vitae ex hendrerit faucibus. Mauris hendrerit quam at maximus scelerisque. Praesent ligula tellus, viverra non condimentum at, vehicula eget quam. Proin sit amet metus a lorem scelerisque porta.<br>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!--seção de alinos--> 
         <section class="min-h-screen bg-bg-colorprincipal" id="Alunos">
             <!--titulo da seção-->
-            <h1 class="tituloalunos p-8 text-3xl">Alunos</h1>
+            <h1 class="titulos p-8 text-3xl">Alunos</h1>
             <!--alunos-->
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+
+                    <!--slide imagens-->
+                    <div class="slide first">
+                        <img src="assets/slide1.jpg" alt="imagem1">
+                    </div>
+                    <div class="slide">
+                    <img src="assets/slide2.jpg" alt="imagem2">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/slide3.jpg" alt="imagem3">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/slide4.jpg" alt="imagem4">
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
-        <section class="" id="planos">
+        <!--seção de planos-->
+        <section class="min-h-screen bg-bg-colorprincipal" id="planos">
+            <h1 class="titulos p-8 text-3xl">Faça parte do time</h1>
+            <!--plano1-->
+            <div class="quadroPlanos">
+
+            </div>
+            <!--plano2-->
+            <div class="quadroPlanos">
+
+            </div>
+            <!--plano3-->
+            <div class="quadroPlanos">
+
+            </div>
 
         </section>
-        <section class="" id="contato">
+        <section class="" id="contato bg-bg-colorprincipal">
 
         </section>
 
     </main>
     <!-- fim da main-->
+     <footer>
+
+     </footer>
     <script src="script.js"></script>
 </body>
 </html>
