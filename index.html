@@ -18,24 +18,24 @@
             </div>
 
             <ul class="nav-list flex list-none">
-                <li class="ml-8"><a href="#">Sobre mim</a></li>
-                <li class="ml-8"><a href="#">Alunos</a></li>
-                <li class="ml-8"><a href="#">Planos</a></li>
-                <li class="ml-8"><a href="#">Contato</a></li>
+                <li class="ml-8"><a href="#Sobre">Sobre mim</a></li>
+                <li class="ml-8"><a href="#Alunos">Alunos</a></li>
+                <li class="ml-8"><a href="#Planos">Planos</a></li>
             </ul>
         </nav>
     </header>
     <!-- final Header-->
     <!-- main-->
     <main>
-        <section class="flex flex-col items-center justify-center min-h-screen bg-home bg-cover bg-center text-white" id="home">
+        <section class="flex flex-col items-center justify-center min-h-screen bg-home bg-cover bg-center text-white" id="Home">
             <div class="bg-cyan-800 bg-opacity-40 rounded-md p-4 m-3">
                 <h1 class="justify-center items-center font-bold text-center text-4xl md:text-7xl">Seu corpo,sua melhor versão</h1>
                 <p class="justify-center items-center text-center font-mono font-bold text-base text-zinc-50 md:text-xl">olá,sou Wanderson,atuo como personal e espero poder te ajudar em sua caminhada</p>
+
             </div>
         </section>
 
-        <section class="min-h-screen bg-bg-colorprincipal" id="sobreMim">
+        <section class="min-h-screen bg-bg-colorprincipal" id="Sobre">
             <!--titulo da seção-->
             <h1 class="titulos p-8 text-3xl">Quem sou?</h1>
             <!--Descrição-->
@@ -53,11 +53,11 @@
             </div>
         </section>
         <!--seção de alinos--> 
-        <section class="min-h-screen bg-bg-colorprincipal" id="Alunos">
+        <section class="min-h-screen bg-zinc-950" id="Alunos">
             <!--titulo da seção-->
             <h1 class="titulos p-8 text-3xl">Alunos</h1>
             <!--alunos-->
-            <div class="slider">
+            <div class="slider md">
                 <div class="slides">
                     <input type="radio" name="radio-btn" id="radio1">
                     <input type="radio" name="radio-btn" id="radio2">
@@ -78,36 +78,63 @@
                         <img src="assets/slide4.jpg" alt="imagem4">
                     </div>
 
+                    <div class="navigation-auto">
+                        <div class="autobtn1"></div>
+                        <div class="autobtn2"></div>
+                        <div class="autobtn3"></div>
+                        <div class="autobtn4"></div>
+                    </div>
+
+                </div>
+                <div class="manual-navigation">
+                    <label for="radio1" class="manualbtn"></label>
+                    <label for="radio2" class="manualbtn"></label>
+                    <label for="radio3" class="manualbtn"></label>
+                    <label for="radio4" class="manualbtn"></label>
                 </div>
 
             </div>
 
+
+
         </section>
         <!--seção de planos-->
-        <section class="min-h-screen bg-bg-colorprincipal" id="planos">
+        <section class="min-h-screen bg-bg-colorprincipal bg-plans bg-cover bg-fixed bg-center" id="Planos">
             <h1 class="titulos p-8 text-3xl">Faça parte do time</h1>
             <!--plano1-->
-            <div class="quadroPlanos">
-
-            </div>
-            <!--plano2-->
-            <div class="quadroPlanos">
-
-            </div>
-            <!--plano3-->
-            <div class="quadroPlanos">
-
+            <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+                <div class="quadroPlanos items-center text-center gap-1">
+                    <h2>Mensal</h2>
+                    <p>ficha personalizada</p>
+                    <p>atendimento online</p>
+                    <p>ficha nutricional</p>
+                    <p>acompanhamento presencial</p>
+                    <p>sem taxa de cancelamento</p>
+                    <h2>R$ 100,00/mês</h2>
+                    <a href="" class="bg-green-700 rounded-xl p-2 mt-2">garanta ja sua vaga</a>
+                </div>
+                <!--plano2-->
+                <div class="quadroPlanos items-center text-center gap-1 mb-1">
+                    <h2 class="">Anual</h2>
+                    <p>ficha personalizada</p>
+                    <p>ficha nutricional</p>
+                    <p>acompanhamento presencial</p>
+                    <p>sem taxa de cancelamento</p>
+                    <h2>R$ 960,00 a vista ou</h2>
+                    <h3>R$ 80,00/mês</h3>
+                    <a href="" class="bg-green-700 rounded-xl p-2 mt-2">garanta ja sua vaga</a>
+                </div>
             </div>
 
         </section>
-        <section class="" id="contato bg-bg-colorprincipal">
-
-        </section>
-
     </main>
     <!-- fim da main-->
-     <footer>
-
+     <footer class="bg-black bg-plans bg-cover bg-bottom  shadow-sm w-full h-36 text-white">      
+        <a href="#Home" class="block pt-2 ml-5">-   Home</a>
+        <a href="#Sobre" class="block ml-5">-   Sobre mim</a>
+        <a href="#Alunos" class="block ml-5">-   Alunos</a>
+        <a href="#Planos" class="block ml-5">-   Planos</a>
+        <p class="ml-5"> &#169 2024 todos os direitos reservados a Wanderson</p>
      </footer>
     <script src="script.js"></script>
 </body>
