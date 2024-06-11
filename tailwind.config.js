@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        "home": "url('./assets/BGHOME.JPG')",
-        "plans": "url('./assets/FOGUETE.JPG')"
+        "home": "url('../assets/BGHOME.JPG')",
+        "plans": "url('../assets/FOGUETE.JPG')"
         
       },
       backgroundColor:{
