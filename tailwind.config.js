@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       backgroundImage:{
         "home": "url('/assets/BGHOME.jpg')",
-        "plans": "url('/assets/FOGUETE.jpg')"
+        "plans": "url('/assets/foguete.jpg')"
         
       },
       backgroundColor:{
