@@ -8,6 +8,11 @@ body {
   overflow-x: hidden; /* Prevê rolagem horizontal */
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Adiciona box-sizing global */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit; /* Garante que todos os elementos herdem o box-sizing */
 }
 
 /* Ajustes para a navegação */
@@ -59,6 +64,7 @@ body {
 .slides {
   display: flex;
   transition: transform 1.5s ease;
+  width: 100%; /* Garante que a largura do contêiner de slides não exceda 100% */
 }
 
 .slide {
