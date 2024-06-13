@@ -9,6 +9,7 @@ html {
 body {
   color: white;
   overflow-x: hidden; /* Impede a rolagem horizontal */
+  margin: 0; /* Remove margem padrão do body */
 }
 
 a {
@@ -25,11 +26,6 @@ header a:hover {
   text-transform: uppercase;
   letter-spacing: 4px;
   color: white;
-}
-
-.nav-list {
-  margin: 0;
-  padding: 0;
 }
 
 .nav-list li {
@@ -113,16 +109,16 @@ header a:hover {
 
 .slider {
   margin: auto;
-  width: 100%;
-  max-width: 400px;
+  width: 100%; /* Ajusta a largura para 100% do container */
+  max-width: 720px; /* Define uma largura máxima */
   height: 400px;
   overflow: hidden;
 }
 
 .slides {
+  width: 400%; /* Ajusta a largura */
   display: flex;
-  transition: margin-left 1.5s;
-  width: 400%;
+  transition: margin-left 0.5s;
 }
 
 .slides input {
@@ -130,21 +126,22 @@ header a:hover {
 }
 
 .slide {
-  width: 100%;
-  flex: 1;
+  width: 100%; /* Ajusta a largura para 100% do container */
+  position: relative;
 }
 
 .slide img {
-  width: 100%;
-  height: auto;
+  width: 100%; /* Ajusta a largura para 100% do container */
+  height: auto; /* Mantém a proporção da imagem */
 }
 
 .manual-navigation {
   position: absolute;
-  width: 100%;
+  width: 100%; /* Ajusta a largura para 100% do container */
+  max-width: 720px; /* Define uma largura máxima */
+  margin-top: -40px;
   display: flex;
   justify-content: center;
-  transform: translateY(-40px);
 }
 
 .manualbtn {
@@ -168,15 +165,15 @@ header a:hover {
 }
 
 #radio2:checked ~ .first {
-  margin-left: -100%;
+  margin-left: -100%; /* Ajusta a margem para 100% */
 }
 
 #radio3:checked ~ .first {
-  margin-left: -200%;
+  margin-left: -200%; /* Ajusta a margem para 200% */
 }
 
 #radio4:checked ~ .first {
-  margin-left: -300%;
+  margin-left: -300%; /* Ajusta a margem para 300% */
 }
 
 .navigation-auto div {
@@ -189,10 +186,11 @@ header a:hover {
 
 .navigation-auto {
   position: absolute;
-  width: 100%;
+  width: 100%; /* Ajusta a largura para 100% do container */
+  max-width: 720px; /* Define uma largura máxima */
+  margin-top: 360px;
   display: flex;
   justify-content: center;
-  transform: translateY(-40px);
 }
 
 .navigation-auto div:not(:last-child) {
@@ -215,19 +213,25 @@ header a:hover {
   background-color: white;
 }
 
-@media (min-width: 768px) {
+@media(min-width: 768px) {
   .slider {
-    max-width: 720px;
+    margin: 0 auto;
+    width: 720px;
     height: 480px;
+    overflow: hidden;
   }
 
   .slide img {
-    width: 100%;
-    height: auto;
+    width: 720px;
+    height: 480px;
   }
 
   .manual-navigation {
-    transform: translateY(-5px);
+    position: absolute;
+    width: 720px;
+    margin-top: -5px;
+    display: flex;
+    justify-content: center;
   }
 
   .manualbtn {
@@ -247,7 +251,11 @@ header a:hover {
   }
 
   .navigation-auto {
-    transform: translateY(-5px);
+    position: absolute;
+    width: 720px;
+    margin-top: 395px;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -276,10 +284,14 @@ header a:hover {
   margin-top: 16px;
 }
 
-@media (min-width: 768px) {
+@media(min-width: 768px) {
   .quadroPlanos {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #F2F2F2;
     width: 500px;
     height: 360px;
+    border-radius: 10px;
+    background-color: #061726;
     border: 3px solid #4D4DFF;
     padding: 20px;
   }
@@ -293,8 +305,14 @@ header a:hover {
     font-size: 1.6rem;
     font-weight: 800;
   }
+
+  .quadroPlanos a {
+    display: block;
+    margin-top: 16px;
+  }
 }
 
 footer {
   background-image: url('/assets/footer.jpg');
+  width: 100%; /* Certifica-se que o footer use toda a largura */
 }
