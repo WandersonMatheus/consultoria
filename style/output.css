@@ -834,20 +834,12 @@ video {
   display: none;
 }
 
-.h-24 {
-  height: 6rem;
-}
-
 .h-36 {
   height: 9rem;
 }
 
 .h-auto {
   height: auto;
-}
-
-.h-full {
-  height: 100%;
 }
 
 .min-h-screen {
@@ -1897,11 +1889,11 @@ video {
 }
 
 .bg-home {
-  background-image: url('./assets/BGHOME.jpg');
+  background-image: url('/assets/BGHOME.jpg');
 }
 
 .bg-plans {
-  background-image: url('./assets/BGPLANS.jpg');
+  background-image: url('/assets/BGPLANS.jpg');
 }
 
 .decoration-slice {
@@ -2036,10 +2028,6 @@ video {
 
 .p-8 {
   padding: 2rem;
-}
-
-.p-p-rem {
-  padding: 1.5rem 6rem;;
 }
 
 .pt-2 {
@@ -2598,13 +2586,70 @@ body {
   margin: 0;
 }
 
+header{
+  background-color: #151517;
+  box-shadow: 0px 3px 10px #24252a;
+}
+
 a {
   text-decoration: none;
   color: white;
 }
 
+.nav-bar{
+  padding: 1.5rem 6rem;
+}
+
 .nav-items{
   margin: 0 15px;
+}
+
+.mobile-menu-icon{
+  display: none;
+}
+
+.mobile-menu{
+  display: none;
+}
+
+@media  screen and (max-width:730px){
+  .nav-bar{
+    padding: 1.5rem 4rem;
+  }
+
+  .nav-items{
+    display: none;
+    padding-bottom: 10px;
+  }
+
+  .mobile-menu-icon{
+    display: block;
+  }
+
+  .mobile-menu-icon button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mobile-menu .nav-items{
+    display: block;
+    padding-top: 1.2rem;
+  }
+
+  .mobile-menu{
+    width: 100%;
+  }
+
+  .open {
+    display: block;
+  }
 }
 
 header a:hover {
@@ -2616,10 +2661,6 @@ header a:hover {
   text-transform: uppercase;
   letter-spacing: 4px;
   color: white;
-}
-
-#sobre{
-  background-image: url("assets/BGHOME.jpg");
 }
 
 .titulos {

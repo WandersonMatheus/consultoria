@@ -8,27 +8,37 @@
 </head>
 <body>   
     <!-- Header-->
-    <header class="w-full h-24 bg-black">
-        <nav class="flex justify-around items-center p-p-rem h-full">
+    <header>
+        <nav class="nav-bar flex justify-between items-center">
 
-            <div class="navLogo flex items-center">
+            <div class="nav-logo flex items-center">
                 <a href="#home" class="logo">wm Consultoria</a>
             </div>
 
-            <div class="navList flex items-center">
+            <div class="nav-list flex items-center">
                 <ul class="list-none flex items-center">
                     <li class="nav-items"><a href="#Sobre">Sobre mim</a></li>
                     <li class="nav-items"><a href="#Alunos">Alunos</a></li>
                     <li class="nav-items"><a href="#Planos">Planos</a></li>
                 </ul>
             </div>
+            <div class="mobile-menu-icon">
+                <button onclick="showMenu()"><img class="icon" src="assets/menu_white_36dp.svg" alt=""></button>
+            </div>
         </nav>
 
+        <div class="mobile-menu">
+            <ul class="">
+                <li class="nav-items"><a href="#Sobre">Sobre mim</a></li>
+                <li class="nav-items"><a href="#Alunos">Alunos</a></li>
+                <li class="nav-items"><a href="#Planos">Planos</a></li>
+            </ul>
+        </div>
     </header>
     <!-- final Header-->
     <!-- main-->
     <main>
-        <section class="flex flex-col items-center justify-center min-h-screen bg-home bg-cover bg-center text-white" id="Home">
+        <section class=" flex flex-col items-center justify-center min-h-screen bg-home bg-cover bg-center text-white" id="Home">
             <div class="bg-cyan-800 bg-opacity-40 rounded-md p-4 m-3">
                 <h1 class="justify-center items-center font-bold text-center text-4xl md:text-7xl">Seu corpo,sua melhor versão</h1>
                 <p class="justify-center items-center text-center font-mono font-bold text-base text-zinc-50 md:text-xl">olá,sou Wanderson,atuo como personal e espero poder te ajudar em sua caminhada</p>

@@ -4,15 +4,12 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage:{
-        "home": "url('./assets/BGHOME.jpg')",
-        "plans": "url('./assets/BGPLANS.jpg')"        
+        "home": "url('/assets/BGHOME.jpg')",
+        "plans": "url('/assets/BGPLANS.jpg')"        
       },
       backgroundColor:{
         "bg-colorprincipal": "#111111"
       },
-      padding:{
-        "p-rem": "1.5rem 6rem;"
-      }
     },
   },
   plugins: [],
