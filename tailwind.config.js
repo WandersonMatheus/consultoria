@@ -9,6 +9,9 @@ module.exports = {
       },
       backgroundColor:{
         "bg-colorprincipal": "#111111"
+      },
+      padding:{
+        "p-rem": "1.5rem 6rem;"
       }
     },
   },

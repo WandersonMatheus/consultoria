@@ -731,10 +731,6 @@ video {
   margin-left: 1.25rem;
 }
 
-.ml-8 {
-  margin-left: 2rem;
-}
-
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -1901,11 +1897,11 @@ video {
 }
 
 .bg-home {
-  background-image: url('/assets/BGHOME.jpg');
+  background-image: url('./assets/BGHOME.jpg');
 }
 
 .bg-plans {
-  background-image: url('/assets/FOGUETE.jpg');
+  background-image: url('./assets/BGPLANS.jpg');
 }
 
 .decoration-slice {
@@ -2040,6 +2036,10 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-p-rem {
+  padding: 1.5rem 6rem;;
 }
 
 .pt-2 {
@@ -2594,13 +2594,17 @@ html{
 
 body {
   color: white;
-  overflow-x: hidden;
-  /* Impede a rolagem horizontal */
+  padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
   color: white;
+}
+
+.nav-items{
+  margin: 0 15px;
 }
 
 header a:hover {
@@ -2614,70 +2618,8 @@ header a:hover {
   color: white;
 }
 
-.nav-list li {
-  letter-spacing: 3px;
-  margin-left: 32px;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.mobile-menu {
-  display: none;
-  cursor: pointer;
-}
-
-.mobile-menu div {
-  width: 32px;
-  height: 2px;
-  background-color: white;
-  margin: 8px;
-}
-
-@media (max-width: 999px) {
-  .nav-list {
-    position: absolute;
-    top: 12vh;
-    right: 0;
-    width: 50vw;
-    height: 92vh;
-    background-color: rgb(0, 0, 0);
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-    overflow-y: auto;
-    /* Permite rolagem vertical no menu de navegação */
-  }
-
-  .nav-list li {
-    margin-left: 0;
-    opacity: 0;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-}
-
-.nav-list.active {
-  transform: translateX(0);
-}
-
-.nav-list.active li {
-  opacity: 1;
-  animation: navLinkFade 0.5s ease forwards;
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+#sobre{
+  background-image: url("assets/BGHOME.jpg");
 }
 
 .titulos {
@@ -2896,6 +2838,10 @@ header a:hover {
     display: block;
     margin-top: 16px;
   }
+}
+
+footer{
+  background-image: url('/assets/footer.jpg');
 }
 
 @media (min-width: 640px) {
